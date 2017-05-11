@@ -1,3 +1,4 @@
+# spec/requests/todos_spec.rb
 require 'rails_helper'
 
 RSpec.describe 'Todos API', type: :request do
@@ -20,7 +21,8 @@ RSpec.describe 'Todos API', type: :request do
       expect(response).to have_http_status(200)
     end
   end
-# Test suite for GET /todos/:id
+
+  # Test suite for GET /todos/:id
   describe 'GET /todos/:id' do
     before { get "/todos/#{todo_id}" }
 
@@ -105,4 +107,3 @@ RSpec.describe 'Todos API', type: :request do
     end
   end
 end
-
